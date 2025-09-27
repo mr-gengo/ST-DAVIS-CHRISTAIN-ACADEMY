@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .social {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #007BFF;
+    }
+
+    .phone {
+      text-align: center;
+      margin-top: 10px;
+      color: #555;
+      font-size: 16px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Your Name" required>
+      <input type="email" name="reply_to" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="phone">
+      📞 Call us: +1 (555) 123-4567
+    </div>
+
+    <div class="social">
+      <a href="https://facebook.com/" target="_blank">🌐</a>
+      <a href="https://twitter.com/" target="_blank">🐦</a>
+      <a href="https://linkedin.com/" target="_blank">🔗</a>
+      <!-- Replace icons or use Font Awesome for better visuals -->
+    </div>
+  </div>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => {
+          alert('Message sent successfully!');
+          this.reset();
+        }, (error) => {
+          alert('Failed to send message. Please try again.');
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

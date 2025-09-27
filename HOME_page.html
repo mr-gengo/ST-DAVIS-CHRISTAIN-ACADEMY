@@ -1,0 +1,141 @@
+>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ST DAVIS CHRISTAIN ACADEMY</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f4f4f9;
+       }
+       header {
+           background-color: #0047ab;
+           color: white;
+           padding: 20px;
+           text-align: center;
+       }
+       nav {
+           background-color: #003580;
+           overflow: hidden;
+       }
+       nav a {
+           float: left;
+           display: block;
+            justify-content: space-between;
+           color: white;
+           text-align: center;
+           padding: 14px 20px;
+           text-decoration: none;
+       }
+       nav a:hover {
+           background-color: #72df68ff;
+       }
+       .content {
+           padding: 20px;
+           text-align: center;
+       }
+       footer {
+           background-color: #003580;
+           color: white;
+           text-align: center;
+           padding: 10px 0;
+           position: fixed;
+           bottom: 0;
+           width: 100%;
+       }
+       .image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .image {
+      position: center;
+      width: 400px;
+      height: 300px;
+      border-radius: 10%;
+      animation: rotate 15s linear infinite;
+    }
+
+    .image:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .image:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .image:nth-child(3) {
+      animation-delay: 3s;
+    }
+
+    .image:nth-child(4) {
+      animation-delay: 7s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+      }
+    }
+   .typewriter{
+  font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    h1{
+        align:center;
+          text-align: center;
+    }
+p{
+    font-size:28px;
+}
+   }
+   </style>
+</head>
+<body>
+<header>
+   <h1>Welcome to ST DAVIS CHRISTAIN ACADEMY</h1>
+</header>
+<nav>
+   <a href="HOME_page.html">HOME PAGE</a>
+   <a href="About us.html">ABOUT US</a>
+   <a href="admissions">ADMISSION</a>
+   <a href="Contact page.html">CONTACT</a>
+  
+    <a href="Students_Reg.html">Students_Reg</a>
+</nav>
+<div class="typewriter">
+<center>
+   <h2 style=>About Our School</h2>
+</center>
+     <p><b>ST DAVIS CHRISTIAN ACADEMY</b> is committed to providing quality education and fostering a culture of excellence.</p>
+   </div>
+ 
+<div class="image-container">
+
+<img src="logo.jpg" style="width:20%;" class="image" alt="Logo">
+<img src="SEPTEMBER.jpg" style="width:20%;" class="image" alt="Sep">
+<img src="office.jfif" style="width:20%;" class="image" alt="office">
+<img src="FLYER 1.jpg" style="width:20%;" class="image" alt="fyler">
+
+</div>
+
+</div>
+<footer>
+   <p>© st davis christian academy. All rights reserved.</p>
+</footer>
+</body>
+</html>
